@@ -1,0 +1,14 @@
+name: Build Frontend
+on: [push]
+jobs:
+  build_frontend:
+    runs-on: ubuntu-latest
+    name: Build Frontend
+    steps:
+    - uses: actions/checkout@v2
+    - id: Build-Frontend
+      uses: xRealNeon/VuePagesAction@1.0.1
+      with:
+        username: 'mehmetbarispolat'
+        reponame: 'mehmetbarispolat.dev'
+        token: ${{ secrets.GITHUB_TOKEN }}
