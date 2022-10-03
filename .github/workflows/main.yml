@@ -12,3 +12,4 @@ jobs:
         username: 'mehmetbarispolat'
         reponame: 'mehmetbarispolat.dev'
         token: ${{ secrets.GITHUB_TOKEN }}
+        cname: 'www.mehmetbarispolat.dev'
