@@ -19,4 +19,4 @@
           - name: Set Creds
             run: git config user.name "mehmetbarispolat" && git config user.email "mehmetbarispolat@gmail.com"
           - name: Deploy
-            run: npm run deploy
+            run: cd mehmetbarispolat.dev && npm run deploy
