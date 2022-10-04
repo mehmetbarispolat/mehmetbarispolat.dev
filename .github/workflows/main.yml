@@ -14,9 +14,11 @@
           - uses: actions/setup-node@v2
             with:
               node-version: 12.x
+          - name: Changing Working Directory
+            run: cd ./mehmetbarispolat.dev
           - name: Install packages
-            run: ls -la
-          # - name: Set Creds
-          #   run: git config user.name "mehmetbarispolat" && git config user.email "mehmetbarispolat@gmail.com"
-          # - name: Deploy
-          #   run: npm run deploy
+            run: npm i
+          - name: Set Creds
+            run: git config user.name "mehmetbarispolat" && git config user.email "mehmetbarispolat@gmail.com"
+          - name: Deploy
+            run: npm run deploy
