@@ -15,7 +15,7 @@
             with:
               node-version: 12.x
           - name: Changing Working Directory
-            run: ls
+            run: cd mehmetbarispolat.dev && ls
           # - name: Install packages
           #   run: npm i
           # - name: Set Creds
