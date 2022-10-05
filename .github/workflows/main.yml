@@ -16,7 +16,5 @@
               node-version: '16.16.0'
           - name: Install packages
             run: cd mehmetbarispolat.dev && npm i npm-run-all
-          - name: Set Creds
-            run: git config --global user.name "mehmetbarispolat" && git config --global user.email "mehmetbarispolat@gmail.com"
           - name: Deploy
             run: cd mehmetbarispolat.dev && npm run deploy
