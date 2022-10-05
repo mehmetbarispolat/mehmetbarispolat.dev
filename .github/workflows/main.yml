@@ -17,14 +17,12 @@
           - name: Setup SSH Keys and known_hosts
             env:
               SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-            run: |
-              ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-              ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
-          - name: Some task that fetches dependencies
+            run: ssh-agent -a $SSH_AUTH_SOCK > /dev/null && ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+          - name: Install packages
             env:
               SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-            run: ./fetch-deps.sh
-          - name: Install packages
             run: cd mehmetbarispolat.dev && npm i npm-run-all
           - name: Deploy
+            env:
+              SSH_AUTH_SOCK: /tmp/ssh_agent.sock
             run: cd mehmetbarispolat.dev && npm run deploy
