@@ -6,7 +6,6 @@ npm run build
 
 cd dist
 
-git init
 git config --global user.name "mehmetbarispolat" && git config --global user.email "mehmetbarispolat@gmail.com"
 git add -A
 git commit -m 'New Deployment for Production'
