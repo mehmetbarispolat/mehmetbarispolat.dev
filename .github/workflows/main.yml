@@ -2,7 +2,7 @@
   on:
     push:
       branches:
-        - master
+        - deploy-branch
   jobs:
     gh-pages-deploy:
       name: Deploying to Production
@@ -17,6 +17,6 @@
           - name: Install packages
             run: cd mehmetbarispolat.dev && npm i npm-run-all
           - name: Set Creds
-            run: git config user.name "mehmetbarispolat" && git config user.email "mehmetbarispolat@gmail.com"
+            run: git config --global user.name "mehmetbarispolat" && git config --global user.email "mehmetbarispolat@gmail.com"
           - name: Deploy
             run: cd mehmetbarispolat.dev && npm run deploy
