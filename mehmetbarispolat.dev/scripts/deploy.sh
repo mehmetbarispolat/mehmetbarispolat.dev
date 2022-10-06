@@ -8,7 +8,7 @@ npm run build
 git config --global user.name "mehmetbarispolat" && git config --global user.email "mehmetbarispolat@gmail.com"
 git --work-tree dist add --all
 git --work-tree dist commit -m 'New Deployment for Production'
-git push git@github.com:mehmetbarispolat/mehmetbarispolat.dev.git HEAD:deploy-branch --force
+git push origin HEAD:deploy-branch --force
 rm -r dist
 git checkout -f master
 git branch -D deploy-branch
