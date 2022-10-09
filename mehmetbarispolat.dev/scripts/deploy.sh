@@ -11,5 +11,6 @@ git --work-tree dist commit -m 'New Deployment for Production'
 git push git@github.com:mehmetbarispolat/mehmetbarispolat.dev.git master:gh-deploy --force
 rm -r dist
 git checkout -f master
+git branch -D gh-deploy
 
 cd -
